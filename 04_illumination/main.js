@@ -98,6 +98,11 @@ function createSceneGraph(gl, resources) {
         c3po
       ])
     ]);
+
+    // rotateNode = new TransformationSGNode(glm.translate(0,-1.5, 0),  [
+    //       c3po
+    //     ]);
+
     root.append(rotateNode);
   }
 

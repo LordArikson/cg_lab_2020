@@ -441,6 +441,8 @@ class CubeRenderNode extends SceneGraphNode {
 
   // draw the bound data as 6 vertices = 2 triangles starting at index 0
   gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+  super.render(context);
   }
   
 
