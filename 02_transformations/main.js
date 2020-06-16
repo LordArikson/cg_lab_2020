@@ -115,6 +115,20 @@ function init(resources) {
   initCubeBuffer();
 }
 
+function initTriangleBuffer() {
+
+  triangleVertexBuffer = gl.createBuffer();
+
+  gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexBuffer);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0, 100, -100]), gl.ARRAY_BUFFER);
+
+  triangleColorBuffer = gl.createBuffer();
+
+  gl.bindBuffer(gl.ARRAY_BUFFER, triangleColorBuffer);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([0, 0, 1]), gl.ARRAY_BUFFER);
+
+}
+
 function initQuadBuffer() {
 
   //create buffer for vertices
@@ -185,6 +199,15 @@ function render(timeInMilliseconds) {
 
   // animate based on elapsed time
   animatedAngle = timeInMilliseconds/10;
+}
+
+function renderTriangle(sceneMatrix, viewMatrix) {
+  
+  setUpModelViewMatrix(viewMatrix, sceneMatrix);
+
+  gl.bindBuffer()
+
+
 }
 
 function renderQuad(sceneMatrix, viewMatrix) {
